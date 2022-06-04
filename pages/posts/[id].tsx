@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import { IineButton } from '../../components/IineButton'
 
 export default function Post({
   postData
@@ -25,6 +26,7 @@ export default function Post({
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <IineButton title={postData.title}/>
       </article>
     </Layout>
   )
